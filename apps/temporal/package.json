@@ -1,0 +1,35 @@
+{
+  "name": "temporal",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "dotenvx run --env-file=env/.env.development -- tsup --watch --onSuccess \"node dist/worker.js\"",
+    "build": "tsup",
+    "lint": "eslint src/"
+  },
+  "devDependencies": {
+    "@dotenvx/dotenvx": "^0.18.0",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/jest-presets": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/html-to-text": "^9.0.4",
+    "@types/mjml": "^4.7.4",
+    "@types/node": "^20.11.25",
+    "@types/nodemailer": "^6.4.14",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "@faire/mjml-react": "^3.3.0",
+    "@repo/mjml": "workspace:*",
+    "@temporalio/activity": "^1.9.3",
+    "@temporalio/client": "^1.9.3",
+    "@temporalio/worker": "^1.9.3",
+    "@temporalio/workflow": "^1.9.3",
+    "html-to-text": "^9.0.5",
+    "mjml": "^4.15.3",
+    "nanoid": "^5.0.6",
+    "nodemailer": "^6.9.12"
+  }
+}

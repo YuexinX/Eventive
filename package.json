@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "clean": "turbo run clean",
+    "dev": "turbo run dev",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "docker": "BUILDKIT_PROGRESS=plain docker-compose -f local/docker-compose.yml up -d --build --remove-orphans"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/uuid": "^9.0.8",
+    "prettier": "^3.2.5",
+    "turbo": "^1.12.5"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@trpc/client": "11.0.0-next-beta.289",
+    "@trpc/server": "11.0.0-next-beta.289",
+    "currency.js": "^2.0.4",
+    "moment-timezone": "^0.5.45",
+    "uuid": "^9.0.1",
+    "zod": "^3.23.8"
+  }
+}

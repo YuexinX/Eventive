@@ -1,0 +1,14 @@
+{
+  "extends": "@repo/typescript-config/base.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "allowImportingTsExtensions": false,
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "jsx": "react-jsx"
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["."]
+}

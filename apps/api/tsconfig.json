@@ -1,0 +1,25 @@
+{
+  "extends": "@repo/typescript-config/base.json",
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": false,
+    "allowImportingTsExtensions": false,
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@temporal/workflows": ["../temporal/src/workflows"],
+      "@temporal/workflows/dto": ["../temporal/src/workflows/dto"],
+      "@temporal/shared": ["../temporal/src/shared"],
+      "@temporal": ["../temporal/src"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": ["."],
+  "references": [
+    {
+      "path": "../temporal/tsconfig.json"
+    }
+  ]
+}

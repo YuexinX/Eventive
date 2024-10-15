@@ -1,0 +1,6 @@
+export default {
+  LOCAL_STORAGE_ACCESS_TOKEN_KEY: 'access_token',
+  LOCAL_STORAGE_REFRESH_TOKEN_KEY: 'refresh_token',
+  SIDEBAR_WIDTH: 240,
+  INPUT_DEBOUNCE: 350,
+};

@@ -1,0 +1,181 @@
+{
+  "id": "ac338d4a-bd0a-441a-9544-90465fdb89bb",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "5",
+  "dialect": "pg",
+  "tables": {
+    "users": {
+      "name": "users",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "uuid": {
+          "name": "uuid",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "(uuid_generate_v4())"
+        },
+        "is_admin": {
+          "name": "is_admin",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "gender": {
+          "name": "gender",
+          "type": "gender_enum",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "password": {
+          "name": "password",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "password_reset_token": {
+          "name": "password_reset_token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "password_reset_token_sent_at": {
+          "name": "password_reset_token_sent_at",
+          "type": "timestamp (3)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "password_reset_token_expired_at": {
+          "name": "password_reset_token_expired_at",
+          "type": "timestamp (3)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "is_email_confirmed": {
+          "name": "is_email_confirmed",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "email_confirmed_at": {
+          "name": "email_confirmed_at",
+          "type": "timestamp (3)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "email_confirm_token": {
+          "name": "email_confirm_token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "email_confirm_token_sent_at": {
+          "name": "email_confirm_token_sent_at",
+          "type": "timestamp (3)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_email": {
+          "name": "updated_email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "email_update_token": {
+          "name": "email_update_token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "email_update_token_sent_at": {
+          "name": "email_update_token_sent_at",
+          "type": "timestamp (3)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "email_update_token_expired_at": {
+          "name": "email_update_token_expired_at",
+          "type": "timestamp (3)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp (3)",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp (3)",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "deleted_at": {
+          "name": "deleted_at",
+          "type": "timestamp (3)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {
+        "user_uuid_unique_index": {
+          "name": "user_uuid_unique_index",
+          "columns": [
+            "uuid"
+          ],
+          "isUnique": true
+        },
+        "user_email_unique_index": {
+          "name": "user_email_unique_index",
+          "columns": [
+            "email"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {
+    "gender_enum": {
+      "name": "gender_enum",
+      "values": {
+        "MALE": "MALE",
+        "FEMALE": "FEMALE",
+        "OTHER": "OTHER",
+        "PREFER_NOT_TO_SAY": "PREFER_NOT_TO_SAY"
+      }
+    }
+  },
+  "schemas": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

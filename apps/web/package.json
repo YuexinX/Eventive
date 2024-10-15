@@ -1,0 +1,47 @@
+{
+  "name": "web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "clean": "rm -rf dist",
+    "dev": "dotenvx run --env-file=env/.env.development -- vite --clearScreen false",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@hookform/resolvers": "^3.3.4",
+    "@mui/icons-material": "^5.15.12",
+    "@mui/lab": "5.0.0-alpha.170",
+    "@mui/material": "^5.15.12",
+    "@mui/x-date-pickers": "^6.19.6",
+    "@repo/ui": "workspace:*",
+    "@tanstack/react-query": "^5.25.0",
+    "@trpc/react-query": "11.0.0-next-beta.289",
+    "jwt-decode": "^4.0.0",
+    "query-string": "^8.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.51.0",
+    "react-imask": "^7.5.0",
+    "react-router-dom": "^6.22.3",
+    "serve-handler": "^6.1.5",
+    "use-query-params": "^2.2.1"
+  },
+  "devDependencies": {
+    "@dotenvx/dotenvx": "^0.18.0",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "@types/serve-handler": "^6.1.4",
+    "@vitejs/plugin-react-swc": "^3.6.0",
+    "serve": "^14.2.1",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.5",
+    "vite-tsconfig-paths": "^4.3.1"
+  }
+}

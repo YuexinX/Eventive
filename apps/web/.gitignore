@@ -1,0 +1,7 @@
+# env
+env/.env.dev
+env/.env.development
+env/.env.prod
+env/.env.production
+env/.env.staging
+env/.env.test
